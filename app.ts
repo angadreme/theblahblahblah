@@ -8,8 +8,8 @@ import * as ejs from 'ejs';
 import * as mongoose from 'mongoose';
 require('dotenv').config({silent: true});
 
-//import routes from './routes/index';
-//import users from './routes/users';
+import questions from './api/questions';
+import answers from './api/answers';
 
 mongoose.connect(process.env.CONNECTION_STRING)
   .then(() => console.log('connection established'))
@@ -32,8 +32,8 @@ app.use('/bower_components', express.static(path.join(__dirname, 'bower_componen
 app.use('/ngApp', express.static(path.join(__dirname, 'ngApp')));
 app.use('/api', express.static(path.join(__dirname, 'api')));
 
-//app.use('/', routes);
-//app.use('/users', users);
+app.use('/api/v1/questions', questions);
+app.use('/api/v1/answers', answers);
 
 
 // redirect 404 to home for the sake of AngularJS client-side routes
