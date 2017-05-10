@@ -1,4 +1,4 @@
-namespace theblahblahblah.Services {
+namespace SOS.Services {
 
     export class LessonService {
 
@@ -20,5 +20,5 @@ namespace theblahblahblah.Services {
       }
     }
 
-    angular.module('theblahblahblah').service('lessonService', LessonService);
+    angular.module('SOS').service('lessonService', LessonService);
 }

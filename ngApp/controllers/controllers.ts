@@ -1,4 +1,4 @@
-namespace theblahblahblah.Controllers {
+namespace SOS.Controllers {
 
     export class HomeController {
         public message = 'Hello from the home page!';

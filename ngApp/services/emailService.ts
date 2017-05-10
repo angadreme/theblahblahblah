@@ -1,4 +1,4 @@
-namespace theblahblahblah.Services {
+namespace SOS.Services {
   class EmailService {
     public EMAIL_RESOURCE = this.$resource('api/v1/emails/:action');
     public userEmail;
@@ -15,5 +15,5 @@ namespace theblahblahblah.Services {
       return this.userEmail;
     }
   }
-  angular.module('theblahblahblah').service('emailService', EmailService);
+  angular.module('SOS').service('emailService', EmailService);
 }
