@@ -1,4 +1,4 @@
-namespace theblahblahblah.Services {
+namespace SOS.Services {
 
 class CommentService {
 
@@ -28,6 +28,6 @@ class CommentService {
 
 }
 
-angular.module('theblahblahblah').service('commentService', CommentService);
+angular.module('SOS').service('commentService', CommentService);
 
 }
