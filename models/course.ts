@@ -11,7 +11,7 @@ let courseSchema = new mongoose.Schema({
     required: true
   },
   icon: {
-    type: String, 
+    type: String,
     Required: true
   }
 });
