@@ -31,6 +31,6 @@ namespace theblahblahblah {
         $locationProvider.html5Mode(true);
     });
 
-    
+
 
 }
