@@ -11,6 +11,7 @@ router.post('/', (req, res) => {
   let newCourse = new Course();
   newCourse.name = req.body.name;
   newCourse.icon = req.body.icon;
+  newCourse.save().then((createdCourse) => res.json(createdCourse));
 });
 
 router.get('/:id', (req, res) => {
@@ -25,5 +26,7 @@ router.post('/:id', (req, res) => {
     foundCourse.save().then((savedCourse) => res.json(savedCourse));
   });
 });
+
+
 
 export default router;
