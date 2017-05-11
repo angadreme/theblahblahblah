@@ -27,6 +27,4 @@ router.post('/:id', (req, res) => {
   });
 });
 
-
-
 export default router;

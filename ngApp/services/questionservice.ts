@@ -1,4 +1,4 @@
-namespace theblahblahblah.Services {
+namespace SOS.Services {
 
   export class QuestionService {
     private QUESTION_RESOURCE = this.$resource('/api/v1/questions/:id');
@@ -37,5 +37,5 @@ namespace theblahblahblah.Services {
 
   }
 
-  angular.module('theblahblahblah').service('QuestionService', QuestionService);
+  angular.module('SOS').service('QuestionService', QuestionService);
 }
