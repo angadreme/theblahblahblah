@@ -47,7 +47,7 @@ router.delete('/:id', (req, res) => {
 });
 
 router.get('/search/:search', (req, res) => {
-  Answer.find({$aContent: req.params.search})
+  Answer.find({aContent: {"$regex": req.params.search, "$options": "i"}})
   .then((matches) => res.json(matches));
 });
 

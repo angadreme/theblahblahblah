@@ -47,9 +47,10 @@ router.delete('/:id', (req, res) => {
 });
 
 router.get('/search/:search', (req, res) => {
-  Question.find({$qcontent: req.params.search},
-    {$qTitle: req.params.search})
-  .then((matches) => res.json(matches));
+  Question.find({$or: [{qContent: {"$regex": req.params.search, "$options": "i"}},
+  {qTitle: {"$regex": req.params.search, "$options": "i"}}]})
+  .then((matches) => res.json(matches))
+  .catch((err) => res.json(err));
 });
 
 export default router;
