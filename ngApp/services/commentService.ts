@@ -1,6 +1,6 @@
 namespace SOS.Services {
 
-class CommentService {
+export class CommentService {
 
   public COMMENT_RESOURCES = this.$resource('api/v1/comments/:id');
   public ANSWERCOMMENT_RESOURCES = this.$resource('api/v1/comments/answers/:id/comment');

@@ -37,5 +37,5 @@ namespace SOS.Services {
 
   }
 
-  angular.module('SOS').service('QuestionService', QuestionService);
+  angular.module('SOS').service('questionService', QuestionService);
 }
