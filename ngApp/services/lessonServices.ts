@@ -1,6 +1,6 @@
 namespace SOS.Services {
 
-    export class LessonService {
+    export class LessonServices {
 
       private LESSON_RESOURCE = this.$resource('/api/v1/lessons/:id');
       private COURSELESSON_RESOURCE = this.$resource('/api/v1/lessons/course/:id/lessons');
@@ -20,5 +20,5 @@ namespace SOS.Services {
       }
     }
 
-    angular.module('SOS').service('lessonService', LessonService);
+    angular.module('SOS').service('lessonServices', LessonServices);
 }
