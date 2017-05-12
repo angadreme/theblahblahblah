@@ -1,5 +1,5 @@
 namespace SOS.Services {
-  class EmailService {
+  export class EmailService {
     public EMAIL_RESOURCE = this.$resource('api/v1/emails/:action');
     public userEmail;
 
