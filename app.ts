@@ -8,8 +8,14 @@ import * as ejs from 'ejs';
 import * as mongoose from 'mongoose';
 require('dotenv').config({silent: true});
 
+
 import questions from './api/questions';
 import answers from './api/answers';
+import Courses from './api/courses';
+import Lessons from './api/lessons';
+import comments from './api/commentApi';
+import emails from './api/emailApi';
+import Languages from './api/languages';
 
 mongoose.connect(process.env.CONNECTION_STRING)
   .then(() => console.log('connection established'))
@@ -34,6 +40,12 @@ app.use('/api', express.static(path.join(__dirname, 'api')));
 
 app.use('/api/v1/questions', questions);
 app.use('/api/v1/answers', answers);
+app.use('/api/v1/courses', Courses);
+app.use('/api/v1/lessons', Lessons);
+app.use('/api/v1/comments', comments);
+app.use('/api/v1/emails', emails);
+app.use('/api/v1/languages', Languages);
+
 
 
 // redirect 404 to home for the sake of AngularJS client-side routes

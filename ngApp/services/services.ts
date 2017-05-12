@@ -1,3 +1,3 @@
-namespace theblahblahblah.Services {
+namespace SOS.Services {
 
     }

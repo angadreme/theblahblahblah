@@ -1,6 +1,6 @@
-namespace theblahblahblah {
+namespace SOS {
 
-    angular.module('theblahblahblah', ['ui.router', 'ngResource', 'ui.bootstrap']).config((
+    angular.module('SOS', ['ui.router', 'ngResource', 'ui.bootstrap']).config((
         $stateProvider: ng.ui.IStateProvider,
         $urlRouterProvider: ng.ui.IUrlRouterProvider,
         $locationProvider: ng.ILocationProvider
@@ -10,13 +10,13 @@ namespace theblahblahblah {
             .state('home', {
                 url: '/',
                 templateUrl: '/ngApp/views/home.html',
-                controller: theblahblahblah.Controllers.HomeController,
+                controller: SOS.Controllers.HomeController,
                 controllerAs: 'controller'
             })
             .state('about', {
                 url: '/about',
                 templateUrl: '/ngApp/views/about.html',
-                controller: theblahblahblah.Controllers.AboutController,
+                controller: SOS.Controllers.AboutController,
                 controllerAs: 'controller'
             })
             .state('notFound', {
@@ -31,6 +31,6 @@ namespace theblahblahblah {
         $locationProvider.html5Mode(true);
     });
 
-    
+
 
 }
