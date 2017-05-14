@@ -1,6 +1,6 @@
-namespace theblahblahblah {
+namespace SOS {
 
-    angular.module('theblahblahblah', ['ui.router', 'ngResource', 'ui.bootstrap']).config((
+    angular.module('SOS', ['ui.router', 'ngResource', 'ui.bootstrap']).config((
         $stateProvider: ng.ui.IStateProvider,
         $urlRouterProvider: ng.ui.IUrlRouterProvider,
         $locationProvider: ng.ILocationProvider
@@ -10,13 +10,31 @@ namespace theblahblahblah {
             .state('home', {
                 url: '/',
                 templateUrl: '/ngApp/views/home.html',
-                controller: theblahblahblah.Controllers.HomeController,
+                controller: SOS.Controllers.HomeController,
                 controllerAs: 'controller'
             })
-            .state('about', {
-                url: '/about',
-                templateUrl: '/ngApp/views/about.html',
-                controller: theblahblahblah.Controllers.AboutController,
+            .state('languages', {
+                url: '/languages',
+                templateUrl: '/ngApp/views/languages.html',
+                controller: SOS.Controllers.LanguagesController,
+                controllerAs: 'controller'
+            })
+            .state('lessons', {
+                url: '/lessons',
+                templateUrl: '/ngApp/views/lessons.html',
+                controller: SOS.Controllers.LessonsController,
+                controllerAs: 'controller'
+            })
+            .state('questions', {
+                url: '/questions',
+                templateUrl: '/ngApp/views/questions.html',
+                controller: SOS.Controllers.QuestionsController,
+                controllerAs: 'controller'
+            })
+            .state('answers', {
+                url: '/answers',
+                templateUrl: '/ngApp/views/answers.html',
+                controller: SOS.Controllers.AnswersController,
                 controllerAs: 'controller'
             })
             .state('notFound', {
@@ -31,6 +49,6 @@ namespace theblahblahblah {
         $locationProvider.html5Mode(true);
     });
 
-    
+
 
 }
