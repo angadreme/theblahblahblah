@@ -1,4 +1,4 @@
-namespace theblahblahblah.Controllers {
+namespace SOS.Controllers {
 
     export class HomeController {
         public message = 'Hello from the home page!';
@@ -10,3 +10,6 @@ namespace theblahblahblah.Controllers {
     }
 
 }
+
+
+//SEPERATE OUT THESE TWO CONTROLLERS INTO TWO FILES AND CHANGE ABOUT TO LANGUAGES
